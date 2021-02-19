@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="keywords" content="reservation,estimation prix,prix location ,agence de voiture ,car, camion , moto ,citadine,utilitaire,engin de chantier,berline,compact,locationdelux,lux,location" />
+    <meta name="description" content="Agence contient toutes types de vehecul pour ceux qui souhaite louer un vhecul de lux et pas cher" />
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>reservation</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+
+    <link rel="stylesheet" href="reservationStyle.css">
+
+
+</head>
+
+<body>
+    <header>
+        <section>
+            <header>
+
+                <h2 class="logo"> Locationde<span style="color: #D28A00;">lux</span></h2>
+                <div class="menu">
+                    <ul>
+                        <li><a href="CONTACTS.html">CONTACTS</a></li>
+                        <li><a style="color: black; background: #D28A00;" href="reservation.html">RESERVATION</a></li>
+                        <li><a href="Gallery_products.html">NOS PRODUITS</a></li>
+                        <li><a href="acceuil.html">ACCEUIL</a></li>
+                    </ul>
+                </div>
+            </header>
+        </section>
+
+
+
+
+        <div class="ph">
+            <div class="Box_all">
+                <form class="formm">
+                    <div class="selec">
+                        <div class="slt Stl_vehecul">
+                            <label>Vehecul<label>
+                                    <select class="inp" id="vehecul" onchange="checkLi()">
+                                        <option>choice a type</option>
+                                        <option value="Moto"> Moto</option>
+                                        <option value="Citadine"> Citadine</option>
+                                        <option value="Compact"> Compact</option>
+                                        <option value="Utilitaire"> Utilitaire</option>
+                                        <option value="Engin de chantier"> Engin de chantier</option>
+                                        <option value="Berline">Berline</option>
+                                        <option value="Camion">Camion</option>
+                                    </select>
+                        </div>
+
+                        <div class="slt Stl_boite_av">
+                            <label>Boite a vitesse</label>
+                            <select class="inp" id="boite_av" onchange="chekBoite()">
+                                <option>choice a option</option>
+                            </select>
+</div>
+                            <div class="slt Stl_carburant">
+                                <label>Carburant</label>
+                                <select class="inp" id="carburant" onchange="chekCarburant()">
+                                    <option>choice a carburant</option>
+                                </select>
+                            </div>
+                        
+                        <div class="slt Stl_nbrjr">
+                            <label>Durée de réservation</label>
+                            <input class="inp" type="text" name="nbrjr" id="nbrjr" required minlength="1" maxlength="3"
+                                size="10">
+
+                        </div>
+                        <div class="slt Stl_totale">
+                            <label>Totale d'estimation</label>
+                            <div class="bt"> <input id="btn-res" type="button" id="btn" value="Tarif"></div>
+                            <input class="inp" type="text" disabled value="" id="reslt" />
+                        </div>
+                    </div>
+            </div>
+        </div>
+        </form>
+        <script>
+            var prix = 0;
+            var totale = 0;
+            function checkLi() {
+
+                var choix = document.getElementById("vehecul").value;
+                switch (choix) {
+                    case "Citadine": document.getElementById("boite_av").innerHTML = "<option> Manuelle</option>";
+                        document.getElementById("carburant").innerHTML = "<option> Essence</option> <option> Diesel</option> <option> Electrique</option> <option> Hybride</option>";
+                        prix = 12;
+
+                        break;
+                    case "Compact": document.getElementById("boite_av").innerHTML = "<option> Manuelle</option>";
+                        document.getElementById("carburant").innerHTML = "<option> Essence</option> <option> Diesel</option>  <option> Hybride</option>";
+                        prix = 14;
+                        break;
+
+                    case "Utilitaire": document.getElementById("boite_av").innerHTML = "<option> Manuelle</option>";
+                        document.getElementById("carburant").innerHTML = " <option> Diesel</option>  ";
+                        prix = 16;
+                        break;
+
+                    case "Engin de chantier": document.getElementById("boite_av").innerHTML = "<option> Manuelle</option>";
+                        document.getElementById("carburant").innerHTML = "<option> Essence</option> <option> Diesel</option> ";
+                        prix = 900;
+                        break;
+
+                    case "Berline": document.getElementById("boite_av").innerHTML = "<option> Automatique</option>";
+                        document.getElementById("carburant").innerHTML = "<option> Essence</option> <option> Diesel</option>  <option> Hybride</option>";
+                        prix = 20;
+                        break;
+
+                    case "Camion": document.getElementById("boite_av").innerHTML = "<option> Automatique</option>";
+                        document.getElementById("carburant").innerHTML = " <option> Diesel</option> ";
+                        prix = 250;
+                        break;
+                    case "Moto":
+                        document.getElementById("carburant").innerHTML = " <option> Essence</option> <option> Electrique</option> ";
+                        prix = 10;
+                        break;
+                }
+
+            }
+
+
+            var carburant = 0;
+            var carb = document.getElementById("carburant").value;
+            function chekCarburant() {
+                switch (carb) {
+                    case "Essence": carburant = 0.14;
+                        break;
+
+                    case "Hybride": carburant = 0.09;
+                        break;
+
+                    case "Diesel": carburant = 0.21;
+                        break;
+
+                    case "Electrique": carburant = 0.05;
+                        break;
+
+
+                }
+
+            }
+
+            var boiteav = 0;
+            var boite = document.getElementById("carburant").value;
+            function chekBoite() {
+                switch (carb) {
+                    case "Manuelle": boiteav = 0;
+                        break;
+
+                    case "Automatique": boiteav = 0.19;
+                        break;
+
+
+                }
+
+            }
+
+            function calcul() {
+                var n = document.getElementById("nbrjr").value;
+                totale = n * (prix + (prix * carburant) + (prix * boiteav)) + " €";
+                document.getElementById("reslt").value = totale;
+            }
+
+            document.getElementById("btn-res").addEventListener("click", calcul);
+
+
+        </script>
+
+</body>
+
+</html>

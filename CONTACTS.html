@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="keywords" content="agence de voiture ,contacts,contactez agence de vhecules,car, camion , moto ,citadine,utilitaire,engin de chantier,berline,compact,locationdelux,lux,location" />
+    <meta name="description" content="Agence contient toutes types de vehecul pour ceux qui souhaite louer un vhecul de lux et pas cher" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CONTACTS</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+   
+    
+    <link rel="stylesheet" href="ContactStyle.css">
+
+</head>
+<body>
+    <section >
+        <header>
+            
+            <h2 class="logo"> Locationde<span style="color: #D28A00;">lux</span></h2>
+            
+            <div class="menu">
+                <ul>
+                    <li><a style="color: black; background: #D28A00;" href="CONTACTS.html">CONTACTS</a></li>
+                    <li><a href="reservation.html">RESERVATION</a></li>
+                    <li><a href="Gallery_products.html">NOS PRODUITS</a></li>
+                    <li><a href="acceuil.html">ACCEUIL</a></li>
+                </ul>
+            </div>
+        </header>
+    
+       
+    </section>  
+
+    <section class="contact">
+        <div class="content">
+            <h2>CONTACTS</h2>
+            <p>BESOIN DE PLUS D’INFOS ? <br>
+                N’HÉSITEZ PAS À NOUS CONTACTER.</p>
+
+        </div>
+        <div class="container">
+            <div class="contactInfo">
+                <div class="box">
+                    <div class="icon"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
+                    <div class="text">
+                        <h3>Address</h3>
+                        <p>LOCATIONDELUX megève<br>
+                            601, Route du Petit Bois<br>
+                            74120 Megève
+                        </p>
+                    </div>
+                </div>
+
+
+                <div class="box">
+                    <div class="icon"><i class="fa fa-envelope-o" aria-hidden="true"></i></div>
+                    <div class="text">
+                        <h3>Email</h3>
+                        <p>info@locationdelux.ma</p>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <div class="icon"><i class="fa fa-phone" aria-hidden="true"></i></div>
+                    <div class="text">
+                        <h3>Phone</h3>
+                        <p>T +212 (0)1 47 42 18 22
+                        </p>
+                    </div>
+                </div>
+               
+            </div>
+           
+            <div class="contactForm">
+                <form>
+                    
+                    <h2>Envoie Message</h2>
+                    <div class="inputBox">
+                        <input id="Name" type="text" name="" placeholder="Nom">
+                        
+                    </div>
+
+                    <div class="inputBox">
+                        <input id="Email" type="text" email="" placeholder="Email">
+                        
+                    </div>
+
+                    <div class="inputBox">
+                        <input id="Sbj" type="text" sbj="" placeholder="Enterez Votre Sujet">
+                    
+                    <div class="inputBox">
+                        <textarea id="MSG" placeholder="Entrez Votre Message..."></textarea>
+                      
+                    </div>
+
+                    
+                    
+                    </div>
+                    <div class="inputBox">
+                        <input onclick="affichage()" id="BTN" type="submit" name="" value="Envoyer">
+                        
+                    </div>
+
+
+                </form>
+            </div>
+        </div>
+      
+    </section>
+    
+      
+    <script>
+ function affichage() {
+     var nm = document.getElementById("Name").value;
+     var em = document.getElementById("Email").value;
+     var sj = document.getElementById("Sbj").value;
+     var mg = document.getElementById("MSG").value;
+     alert("Name :"+ nm + "\nEmail :"+em+  "\nSujet :"+sj + "\nMessage :"+mg );
+    
+ }
+    </script>
+    </body>
+    </html>
